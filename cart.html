@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | MODERN STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration:none; color:black;">MODERN<b>STUDIO</b></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Continue Shopping</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="margin-top: 100px;">
+        <h2 class="section-title">Your Shopping Bag</h2>
+        
+        <div id="cart-items-container">
+            </div>
+
+        <div id="cart-summary" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; text-align: right;">
+            <h3 id="total-price">Total: $0.00</h3>
+            <button class="btn" onclick="processCheckout()" style="background: black; color: white; margin-top: 20px;">Proceed to Checkout</button>
+            <button class="btn" onclick="clearCart()" style="background: #eee; color: black; border: none;">Clear Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Run this only on the cart page
+        window.onload = displayCart;
+    </script>
+</body>
+</html>

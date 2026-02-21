@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODERN | Clothing Brand</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MODERN<b>STUDIO</b></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="cart.html" id="cart-count">Cart (0)</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>ESSENTIALS 2026</h1>
+            <p>Define your style with our new minimalist collection.</p>
+            <a href="#products" class="btn">Shop Collection</a>
+        </div>
+    </header>
+
+    <section id="products" class="container">
+        <h2 class="section-title">New Arrivals</h2>
+        <div id="product-grid" class="grid">
+            </div>
+    </section>
+
+    <section id="contact" class="container">
+    <div class="contact-wrapper" style="max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title" style="text-align: center;">Get In Touch</h2>
+        <form id="contact-form" novalidate>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <small class="error-msg"></small>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+                <small class="error-msg"></small>
+            </div>
+            <div class="form-group">
+                <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                <small class="error-msg"></small>
+            </div>
+            <button type="submit" class="add-to-cart-btn">Send Message</button>
+        </form>
+        <div id="form-success" style="display:none; text-align:center; margin-top:20px; color: green;">
+            Thank you! Your message has been sent.
+        </div>
+    </div>
+</section>
+
+    <footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="logo">MODERN<b>STUDIO</b></div>
+            <p style="margin-top:20px; color: #757575;">Premium essentials designed for the modern individual. Quality over quantity, always.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+                <li>New Arrivals</li>
+                <li>Best Sellers</li>
+                <li>Sale</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li>Shipping Policy</li>
+                <li>Returns</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <ul>
+                <li>Instagram</li>
+                <li>Pinterest</li>
+                <li>TikTok</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 MODERN STUDIO. All rights reserved.</p>
+        <p>Privacy Policy | Terms of Service</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
