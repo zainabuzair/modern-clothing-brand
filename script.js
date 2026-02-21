@@ -236,4 +236,46 @@ function clearError(input) {
     input.classList.remove('invalid');
     input.nextElementSibling.innerText = "";
 }
+
+const searchInput = document.getElementById('product-search');
+
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        
+        // Filter the products array
+        const filtered = products.filter(product => 
+            product.name.toLowerCase().includes(term)
+        );
+
+        // Re-render the grid with only the filtered items
+        renderFilteredProducts(filtered);
+    });
+}
+
+function renderFilteredProducts(filteredList) {
+    const productGrid = document.getElementById('product-grid');
+    if (filteredList.length === 0) {
+        productGrid.innerHTML = "<p>No items found matching your search.</p>";
+        return;
+    }
+    
+    // Use the same logic as your original displayProducts function
+    productGrid.innerHTML = filteredList.map(product => `
+        <div class="product-card">
+            <img src="${product.image}" alt="${product.name}">
+            <div class="product-info">
+                <div>
+                    <h3>${product.name}</h3>
+                    <p>$${product.price.toFixed(2)}</p>
+                </div>
+                <select id="size-${product.id}" class="size-select">
+                    <option value="">Size</option>
+                    ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
+                </select>
+            </div>
+            <button class="add-to-cart-btn" onclick="addToCart(${product.id})">Add to Bag</button>
+        </div>
+    `).join('');
+}
         
